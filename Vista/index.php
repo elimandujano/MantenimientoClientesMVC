@@ -8,10 +8,10 @@
         <meta name="keywords" content="PHP, CSS, HTML, Javascript, MVC">
         <title>SISTEMA DE CONTROL DE VENTAS</title>
     </head>
-    <body> <?php echo "Hola Mundo... Pagina en construcción" ?>
+    <body> 
         <header>
             <?php
-                include '../Persistencia/conexion.php';
+                include 'encabezado.php';
             ?>            
         </header>
 

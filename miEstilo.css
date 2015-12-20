@@ -1,0 +1,15 @@
+body{
+    font-family: tahome;
+}
+h3, h5{
+    text-align: center;
+}
+
+img{
+    margin: auto;
+    display: block;
+}
+
+#centrado{
+    text-align: center;
+}
