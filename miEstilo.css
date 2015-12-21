@@ -13,3 +13,45 @@ img{
 #centrado{
     text-align: center;
 }
+
+table{
+    font-family: tahoma;
+    font-size: 12px;
+    margin: auto;
+    width: 970px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.th{
+    font-size: 13px;
+    font-weight: normal;
+    padding: 3px;
+    background: #b9c9fe;
+    border-top: 2px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+}
+
+td{
+    padding: 6px;
+    background: #99ff99;
+    border: 1px solid #fff;
+    color: #003300;
+}
+tr:hover td{
+    background: #33ff33;
+    color: #339;
+}
+
+ul.dropdow-vertical{
+    width: 200px;
+}
+ul.dropdow-vertical ul{
+    top: 1px;
+    left: 99%;
+}
+
+ul.dropdow-vertical li{
+    float: none;
+}

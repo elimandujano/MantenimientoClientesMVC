@@ -7,7 +7,7 @@
         <link href="../estiloMenu.css" rel ="stylesheet">
     </head>
     <body>
-        <img src="../banner.png" width="700" height="200"/>
+        <img src="../banner.png" width="970" height="200"/>
         <header>
             <nav>
                 <li><a href="index.php">Principal</a></li>

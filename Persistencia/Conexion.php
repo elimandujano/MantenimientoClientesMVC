@@ -6,17 +6,16 @@ class Conexion {
     private $user = "root";
     private $password = "";
     private $database = "Ventas2015";
-    Private $port = "127.0.0.1";
-    private $socket = "3306";
+   
     //Método constructor que permite conectarse al servidor y selecciona la BD Ventas2015, al cual queremos conectarnos
     public function __construct() {
-        $this->cn = mysqli_connect($host, $user, $password, $database, $port, $socket);
+        $this->cn = mysqli_connect("localhost", "root", "", "Ventas2015");
     }
     
     //Creando un arreglo de los clientes
     public function listado() {
         $sql = "SELECT ID_CLIENTE, CONCAT(nombres,' ',paterno,' ',materno), DIRECCION, FONO, DESCRIPCION, EMAIL FROM CLIENTE C JOIN DISTRITO D ON C.ID_DISTRITO = D.ID_DISTRITO";
-        $rs = mysqli_query($cn, $sql);
+        $rs = mysqli_query($this->cn, $sql);
         while ($misClientes = mysqli_fetch_array($rs)) {
             $clientes[] = $misClientes;
         }

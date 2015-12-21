@@ -5,7 +5,7 @@
 
 header{
     margin: auto;
-    width: 700px;
+    width: 970px;
     font-family: tahoma;
 }
 
@@ -42,6 +42,6 @@ nav li ul li{
 }
 
 nav li ul li ul{
-    right: 140px;
+    right: 340px;
     top: 0px;
 }

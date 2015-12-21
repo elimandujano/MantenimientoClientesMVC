@@ -78,14 +78,14 @@ class ModeloCliente {
 
     // Implementacion del metodo constructor
     public function __construct($codigo, $nombres, $paterno, $materno, $direccion, $fono, $distrito, $correo) {
-        $this->codigo = $codigo;
-        $this->nombres = $nombres;
-        $this->paterno = $paterno;
-        $this->materno = $materno;
-        $this->direccion = $direccion;
-        $this->fono = $fono;
-        $this->distrito = $distrito;
-        $this->correo = $correo;
+        $this->codigo       = $codigo;
+        $this->nombres      = $nombres;
+        $this->paterno      = $paterno;
+        $this->materno      = $materno;
+        $this->direccion    = $direccion;
+        $this->fono         = $fono;
+        $this->distrito     = $distrito;
+        $this->correo       = $correo;
     }
 
 
