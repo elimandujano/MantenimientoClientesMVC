@@ -11,7 +11,7 @@
     <body> 
         <header>
             <?php
-                include 'encabezado.php';
+                include 'EncabezadoBootstrap.php';
             ?>            
         </header>
 

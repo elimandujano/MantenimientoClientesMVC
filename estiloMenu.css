@@ -14,7 +14,7 @@ ul, ol{
 }
 
 nav, li a{
-    background-color: #336600;
+    background-color: #990033; /*esto es el fonde de los emnus en este caso es vino*/
     color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
@@ -22,7 +22,7 @@ nav, li a{
 }
 
 nav li a:hover{
-    background-color: #33cc00;
+    background-color: #ff0099; /*color de resaltado hover de los menus vino claro*/
 }
 
 nav > li{

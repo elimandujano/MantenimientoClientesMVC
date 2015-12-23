@@ -35,13 +35,13 @@ table{
 
 td{
     padding: 6px;
-    background: #99ff99;
+    background: #ff66cc;
     border: 1px solid #fff;
-    color: #003300;
+    color: #000000; /*este es el color del texto dentro de la tabla sin selecciona:negro*/
 }
 tr:hover td{
-    background: #33ff33;
-    color: #339;
+    background: #ff00cc; /*este es el color al que cambio cuando se pasa el maus por la columna:vinoclaro*/
+    color: #ffffff; /*este es el color del texto al pasar el maus por encima: blanco*/
 }
 
 ul.dropdow-vertical{
