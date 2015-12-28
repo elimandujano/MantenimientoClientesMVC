@@ -47,8 +47,7 @@
                             <td><?php echo $cli[3]; ?></td>
                             <td><?php echo utf8_decode($cli[4]); ?></td>
                             <td><?php echo $cli[5]; ?></td>
-                        </tr>
-                        
+                        </tr>                        
                         <?php } ?>
                     </table>
                 </div>
