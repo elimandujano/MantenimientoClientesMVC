@@ -1,10 +1,8 @@
 <?php
-
-class ControladorCliente {
-    //Incluimos los métodos publicos dentro del archivo ControladorCliente.php
-    include 'hola';
+   //Incluimos los métodos publicos dentro del archivo ControladorCliente.php
     include '../Modelo/ModeloCliente.php';
     include '../Persistencia/Conexion.php';
+    
     // Creamos un objeto conexion para poder acceder a los metodos de este
     $conexion = new Conexion();
     
@@ -12,20 +10,20 @@ class ControladorCliente {
       los valores ingresados para el nuevo cliente*/
     if(isset($_POST['btnRegistrar'])){
             $codigo     =$_POST['txtCodigo'];
-            $nombres    =$_POST['txtNombres'];
-            $paterno    =$_POST['txtPaterno'];
-            $materno    =$_POST['txtMaterno'];
-            $direccion  =$_POST['txtDireccion'];
-            $fono       =$_POST['txtTelefono'];
+            $color      =$_POST['txtColor'];
+            $suela      =$_POST['txtSuela'];
+            $talla      =$_POST['txtTalla'];
+            $destino    =$_POST['txtDestino'];
+            $precio     =$_POST['txtPrecio'];
             $distrito   =$_POST['selDistrito'];
-            $correo     =$_POST['txtEmail'];
+            $tarjeta    =$_POST['txtTarjeta'];
     }
     
     //Creamos un Objeto de la clase ModeloClientes (modCliente) enviando los valores capurados al constructor de la clase
-    $modCliente = new ModeloCliente($codigo, $nombres, $paterno, $materno, $direccion, $fono, $distrito, $correo);
+    $modCliente = new ModeloCliente($codigo, $color, $suela, $talla, $destino, $precio, $distrito, $tarjeta);
     
     //Ejecutamos el registro mediante la invocacion del método registra que se encuentra en la clase conexion.
     $conexion->registra($modCliente);
-    header('location:../Vista/listado.php');
-}
-?>
+    
+    header('location:../Vista/CarminEscolar.php');
+

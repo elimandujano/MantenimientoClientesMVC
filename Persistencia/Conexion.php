@@ -7,20 +7,21 @@ class Conexion {
     public function __construct() {
         $host="localhost";
         $user = "root";
-        $password = "";
-        $database = "Ventas2015";
+        $password = "m4dl3m";
+        $database = "invcmirla";
         $this->cn = mysqli_connect($host,$user,$password,$database);
     }
     
     //Creando un arreglo de los clientes
-    public function listado() {
-        $sql = "SELECT ID_CLIENTE, CONCAT(nombres,' ',paterno,' ',materno) AS CLIENTE, DIRECCION, FONO, DESCRIPCION, EMAIL FROM CLIENTE C JOIN DISTRITO D ON C.ID_DISTRITO = D.ID_DISTRITO";
+    public function listado($modelo,$tienda) {
+        $sql = "SELECT Modelo,Color,Suela,Talla,Tarjeta,Precio FROM vtstocktotal where idDestino = $tienda and Modelo like '$modelo'";
         $rs = mysqli_query($this->cn, $sql);
         while ($misClientes = mysqli_fetch_array($rs)) {
             $clientes[] = $misClientes;
         }
         return $clientes;
     }
+
     //Creando un arreglo de los distrutos
     public function listadoDistritos() {
         $sql = "SELECT ID_DISTRITO, DESCRIPCION FROM DISTRITO";
@@ -40,15 +41,19 @@ class Conexion {
     //Método que permite registrar los datos de un nuevo cliente
     public function registra(ModeloCliente $objCli) {
         $sql = "INSERT INTO CLIENTE(id_cliente, nombres, paterno,materno,direccion,fono,id_distrito,email) "
-                . "VALUES('{$objCli->getCodigo()}','{$objCli->getNombres()}','{$objCli->getPaterno()}','{$objCli->getMaterno()}','{$objCli->getDireccion()}','{$objCli->getFono()}','{$objCli->getDistrito()}','{$objCli->getCorreo()}')";
+                . "VALUES('{$objCli->getCodigo()}','{$objCli->getColor()}','{$objCli->getSuela()}','{$objCli->getTalla()}','{$objCli->getDestino()}','{$objCli->getPrecio()}','{$objCli->getDistrito()}','{$objCli->getTarjeta()}')";
         $rs = mysqli_query($this->cn,$sql);
     }
     //Método que permite buscar un determinado cliente por su codigo
     public function buscaCliente(ModeloCliente $objCli) {
-        $sql = "SELECT * FROM CLIENTE WHERE ID_CLIENTE ='{$objCli->getCodigo()}'";
+        $sql = "Select Modelo,Color,Suela,Talla,Tarjeta,Precio,Destino FROM vtstocktotal WHERE Modelo ='{$objCli->getCodigo()}' and Talla='{$objCli->getTalla()}';";
         $rs = mysqli_query($this->cn, $sql);
-        $cliente = mysqli_fetch_array($rs);
+        while ($misClientes = mysqli_fetch_array($rs)) {
+            $cliente[] = $misClientes;
+        }
         return $cliente;
+        
+        
     }
     //Método que permite actualizar un registro de cliente
     public function actualiza(ModeloCliente $objCli) {
@@ -60,6 +65,15 @@ class Conexion {
             $sql = "DELETE FROM CLIENTE WHERE ID_CLIENTE = '{$objCli->getCodigo()}'";
             $rs = mysqli_query($this->cn, $sql);
     }
+    
+        public function buscaClienteZapaton(ModeloCliente $objCli) {
+        $sql = "Select Modelo,Color,Suela,Talla,Tarjeta,Precio,Destino FROM vtstocktotal WHERE Modelo ='{$objCli->getCodigo()}' and idDestino = 38";
+        $rs = mysqli_query($this->cn, $sql);
+        while ($misClientes = mysqli_fetch_array($rs)) {
+            $cliente[] = $misClientes;
+        }
+        return $cliente;
 
 }
 
+}

@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <title></title>
         <!-- Latest compiled and minified CSS 991598100-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">
@@ -22,26 +22,33 @@
                             <a href="index.php" class="active navbar-brand"><span class="glyphicon glyphicon-cog"></span> Calzados Mirla</a>
                             <div class="collapse navbar-collapse" id="navbar-1">
                                <ul class="nav navbar-nav">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes<span class="caret"></span></a>
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Carmin<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li role="presentation"><a href="listado.php"><span class="glyphicon glyphicon-cog"></span> Listado de Clientes</a></li>
-                                            <li role="presentation"><a href="#">Busqueda de Clientes</a></li>
-                                            <li role="presentation"><a href="#">Nuevo Cliente</a></li>
-                                            <li role="presentation"><a href="#">Actualizar datos</a></li>
+                                            <li role="presentation"><a href="CarminEscolar.php"><span class="glyphicon glyphicon-cog"></span> Escolares</a></li>
+                                            <li role="presentation"><a href="CarminBotas.php"><span class="glyphicon glyphicon-cog"></span> Botas</a></li>
+                                            <li role="presentation"><a href="CarminEmbolsado.php"><span class="glyphicon glyphicon-cog"></span> Embolsados</a></li>
+                                            <li role="presentation"><a href="CarminZapatos.php"><span class="glyphicon glyphicon-cog"></span> Zapatos</a></li>
+                                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cog"></span> Sandalias</a></li>
                                             <li class="divider"></li>
-                                            <li role="presentation"><a href="#">Baja de Cliente</a></li>
+                                            <li role="presentation"><a href="CarminZapatilla.php"><span class="glyphicon glyphicon-cog"></span> Zapatillas</a></li>
                                         </ul></li>                        
-                                    <li><a href="#">Productos<span class="caret"></span></a></li>
-                                    <li><a href="#">Distritos<span class="caret"></span></a></li>
-                                    <li><a href="#">Boletas<span class="caret"></span></a></li>
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Zapaton1035<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cog"></span> Escolares</a></li>
+                                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cog"></span> Botas</a></li>
+                                            <li role="presentation"><a href="Zapaton1035Embolsado.php"><span class="glyphicon glyphicon-cog"></span> Embolsados</a></li>
+                                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cog"></span> Zapatos</a></li>
+                                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cog"></span> Sandalias</a></li>
+                                            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-cog"></span> Zapatillas</a></li>
+                                            <li class="divider"></li>                                            
+                                            <li role="presentation"><a href="BuscarZapaton.php"><span class="glyphicon glyphicon-cog"></span> Buscar</a></li>
+                                        </ul></li>
+                                    <li><a href="#">Mega80<span class="caret"></span></a></li>
+                                    <li><a href="#">Paruro<span class="caret"></span></a></li>
                                     <li><a href="#">Ventas<span class="caret"></span></a></li>
-                                    <li><a href="#">Reportes<span class="caret"></span></a></li>                    
+                                    <li><a href="Buscar.php">Buscar</a></li>                    
                                 </ul> 
-                                <form action="" class="navbar-form navbar-left" role="search">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Buscar">
-                                    </div>
-                                </form>
+               
                             </div>
                         </div>
                     </div>

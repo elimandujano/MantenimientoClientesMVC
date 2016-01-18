@@ -14,7 +14,7 @@
             ?>            
         </header>
         <section>
-            <h3>LISTADO DE CLIENTES</h3>
+            <h3>LISTADO DE MODELOS</h3>
             <?php 
                 //Agregamos los Métodos implementados en la clase conexion.php
                 include '../Persistencia/Conexion.php';
@@ -23,18 +23,18 @@
                 $objCon = new Conexion();
                 
                 /* Invocamos al metodo que lista los clientes mediante el objeto asociado a la clase conexion.*/
-                $cliente = $objCon->listado();                
+                $cliente = $objCon->listado('2%',99);                
             ?>
             <div class="container">
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover" >
                         <tr class="danger">
-                            <td>CODIGO</td>
-                            <td>CLIENTE</td>
-                            <td>DIRECCION</td>
-                            <td>TELEFONO</td>
-                            <td>DISTRITO</td>
-                            <td>EMAIL</td>
+                            <td>Modelo</td>
+                            <td>Color</td>
+                            <td>Suela</td>
+                            <td>Talla</td>
+                            <td>Tarjeta</td>
+                            <td>Precio</td>
                         </tr>
                         <?php 
                             /*Ahora recorremos por los registros para poder colocarlos en una tabla para visualizarlo.*/

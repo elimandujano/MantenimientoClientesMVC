@@ -3,92 +3,89 @@
 class ModeloCliente {
     //Declaracion de los atributos rpivados de la clase
     private $codigo;
-    private $nombres;
-    private $paterno;
-    private $materno;
-    private $direccion;
-    private $fono;
+    private $color;
+    private $suela;
+    private $talla;
+    private $destino;
+    private $precio;
     private $distrito;
-    private $correo;
+    private $tarjeta;
     
     //encapsulacion de los atributos, creacion metodo Get Set
     public function getCodigo() {
         return $this->codigo;
     }
 
-    public function getNombres() {
-        return $this->nombres;
+    public function getColor() {
+        return $this->color;
     }
 
-    public function getPaterno() {
-        return $this->paterno;
+    public function getSuela() {
+        return $this->suela;
     }
 
-    public function getMaterno() {
-        return $this->materno;
+    public function getTalla() {
+        return $this->talla;
     }
 
-    public function getDireccion() {
-        return $this->direccion;
+    public function getDestino() {
+        return $this->destino;
     }
 
-    public function getFono() {
-        return $this->fono;
+    public function getPrecio() {
+        return $this->precio;
     }
 
     public function getDistrito() {
         return $this->distrito;
     }
 
-    public function getCorreo() {
-        return $this->correo;
+    public function getTarjeta() {
+        return $this->tarjeta;
     }
 
     public function setCodigo($codigo) {
         $this->codigo = $codigo;
     }
 
-    public function setNombres($nombres) {
-        $this->nombres = $nombres;
+    public function setColor($color) {
+        $this->color = $color;
     }
 
-    public function setPaterno($paterno) {
-        $this->paterno = $paterno;
+    public function setSuela($suela) {
+        $this->suela = $suela;
     }
 
-    public function setMaterno($materno) {
-        $this->materno = $materno;
+    public function setTalla($talla) {
+        $this->talla = $talla;
     }
 
-    public function setDireccion($direccion) {
-        $this->direccion = $direccion;
+    public function setDestino($destino) {
+        $this->destino = $destino;
     }
 
-    public function setFono($fono) {
-        $this->fono = $fono;
+    public function setPrecio($precio) {
+        $this->precio = $precio;
     }
 
     public function setDistrito($distrito) {
         $this->distrito = $distrito;
     }
 
-    public function setCorreo($correo) {
-        $this->correo = $correo;
+    public function setTarjeta($tarjeta) {
+        $this->tarjeta = $tarjeta;
     }
 
-    // Implementacion del metodo constructor
-    public function __construct($codigo, $nombres, $paterno, $materno, $direccion, $fono, $distrito, $correo) {
-        $this->codigo       = $codigo;
-        $this->nombres      = $nombres;
-        $this->paterno      = $paterno;
-        $this->materno      = $materno;
-        $this->direccion    = $direccion;
-        $this->fono         = $fono;
-        $this->distrito     = $distrito;
-        $this->correo       = $correo;
+    public function __construct($codigo, $color, $suela, $talla, $destino, $precio, $distrito, $tarjeta) {
+        $this->codigo = $codigo;
+        $this->color = $color;
+        $this->suela = $suela;
+        $this->talla = $talla;
+        $this->destino = $destino;
+        $this->precio = $precio;
+        $this->distrito = $distrito;
+        $this->tarjeta = $tarjeta;
     }
 
-
-    
    
 }
